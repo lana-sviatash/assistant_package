@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "assistant-package"
+version = "0.1.0"
+description = ""
+authors = ["lana-sviatash <128919364+lana-sviatash@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+    { include = "assistant_package" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.5.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+assist = "assistant_package.main_menu:menu"
